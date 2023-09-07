@@ -13,12 +13,6 @@ urlpatterns = [
     path('api/videos/', include('videos_app.urls')),
 ]
 
-if settings.DEBUG:
-    import debug_toolbar
-    urlpatterns = [
-        path('__debug__/', include(debug_toolbar.urls)),
-    ] + urlpatterns
-
 schema_view = get_schema_view(
     openapi.Info(
         title="Gallery App",
